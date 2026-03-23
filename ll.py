@@ -1,4 +1,5 @@
 from typing import Any
+import random
 
 class Node:
     def __init__(self, nombre: str, artista: str, album: str):
@@ -16,6 +17,7 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.start = None
+        self.shuffle_mode = False
 
     def __repr__(self):
         nodes = ["START"]
@@ -96,3 +98,19 @@ class LinkedList:
                 return node
         return None
 
+    def toggle_shuffle(self):
+        self.shuffle_mode = not self.shuffle_mode
+
+    def random_node(self, current):
+        while True:
+            index = random.randint(0, len(self) - 1)
+            node = self.start
+            for _ in range(index):
+                node = node.next
+            if node != current:
+                return node
+
+    def next_node(self, current):
+        if self.shuffle_mode:
+            return self.random_node(current)
+        return current.next

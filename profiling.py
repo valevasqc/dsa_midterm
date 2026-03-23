@@ -3,7 +3,6 @@ from canciones import canciones
 from memory_profiler import profile
 import time
 
-@profile
 def creacion_playlist():
     playlist = LinkedList()
     for nombre, artista, album in canciones:
@@ -13,12 +12,10 @@ def creacion_playlist():
 playlist = creacion_playlist()
 print(f"Total de canciones cargadas: {len(playlist)}")
 
-
 # time profiling
 deltas = []
 
 for _ in range(1000):
-
     start_time = time.time()
     creacion_playlist()
     end_time = time.time()
