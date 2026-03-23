@@ -19,7 +19,7 @@ else:
 		print(f"- Album: {actual.data['album']}")
 		print(f"Shuffle: {'ON' if playlist.shuffle_mode else 'OFF'}")
 
-		print("\nOpciones: [s] toggle shuffle | [n] siguiente | [p] anterior | [q] salir")
+		print("\nOpciones: [s] toggle shuffle | [n] siguiente | [p] anterior | [x] salir")
 		opcion = input("Selecciona una opcion: ").strip().lower()
 
 		if opcion == "s":
@@ -37,8 +37,8 @@ else:
 				print("Ya estas en la primera cancion.")
 			else:
 				actual = actual.prev
-		elif opcion == "q":
-			print("Saliendo de la playlist.")
+		elif opcion == "x":
+			print("Saliendo de la playlist...")
 			break
 		else:
-			print("Opcion invalida. Usa s, n, p o q.")
+			print("Opcion invalida. Usa s, n, p o x.")

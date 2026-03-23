@@ -10,9 +10,10 @@ python3 main.py
 
 ## Controles de la playlist
 
+- `s`: toggle shuffle
 - `n`: siguiente canción
 - `p`: canción anterior
-- `q`: salir
+- `x`: salir
 
 La reproducción inicia en la primera canción.
 La playlist no es circular: el inicio y el final son límites.
@@ -22,8 +23,8 @@ La playlist no es circular: el inicio y el final son límites.
 - Complejidad temporal: O(n) porque tiene que moverse los espacios que haya salido en el random
 
 ## Profiling
+```
 Line #    Mem usage    Increment  Occurrences   Line Contents
-=============================================================
      6     17.2 MiB     17.2 MiB           1   @profile
      7                                         def creacion_playlist():
      8     17.2 MiB      0.0 MiB           1       playlist = LinkedList()
@@ -32,7 +33,9 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
     11     17.2 MiB      0.0 MiB           1       return playlist
 
 Total de canciones cargadas: 100
+
 La función tomó: 0.0004s en ejecutarse.
+```
 
 - El espacio en memoria que ocupa es siempre casi el mismo, pues carga la lista de canciones y cualquier incremento posterior al incluirlos en la linkedlist es mínimo, por lo que el redondeo se queda en 0.
 - El tiempo de ejecución también es bajo, indicando eficiencia.

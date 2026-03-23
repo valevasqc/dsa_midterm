@@ -114,3 +114,5 @@ class LinkedList:
         if self.shuffle_mode:
             return self.random_node(current)
         return current.next
+
+# TODO: en el shuffle real, previous regresa al previous escuchado, no al previous en la lista
