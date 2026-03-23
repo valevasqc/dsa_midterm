@@ -34,7 +34,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 Total de canciones cargadas: 100
 La función tomó: 0.0004s en ejecutarse.
 
-- El espacio en memoria que ocupa es siempre el mismo, pues carga la lista de canciones y cualquier incremento posterior al incluirlos en la linkedlist es mínimo, por lo que el redondeo se queda en 0.
+- El espacio en memoria que ocupa es siempre casi el mismo, pues carga la lista de canciones y cualquier incremento posterior al incluirlos en la linkedlist es mínimo, por lo que el redondeo se queda en 0.
 - El tiempo de ejecución también es bajo, indicando eficiencia.
 
 ![Gráfica de utilización de memoria](profiling.png)
